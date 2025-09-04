@@ -4,16 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "UITextView+Placeholder",
+    name: "UITextViewPlaceholder",
+    platforms: [.iOS(.v11)],
     products: [
-        .library(
-            name: "UITextView+Placeholder",
-            targets: ["UITextView+Placeholder"]),
+        .library(name: "UITextView_Placeholder",
+                 targets: ["UITextView_Placeholder"])
     ],
-    dependencies: [],
     targets: [
         .target(
-            name: "UITextView+Placeholder",
-            path: "Sources"),
+            name: "UITextView_Placeholder",
+            publicHeadersPath: "include"
+        )
     ]
 )
